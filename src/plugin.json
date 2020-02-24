@@ -1,0 +1,29 @@
+{
+  "name": "custom.remote.python.spacex",
+  "version": "1.001",
+  "type": "python",
+  "entity": "CUSTOM_DEVICE",
+  "technologies": ["SpaceX"],
+  "metricGroup": "tech.SpaceX",
+  "source": {
+    "package": "spacex_plugin",
+    "className": "SpaceXPlugin",
+    "install_requires": ["requests"],
+    "activation": "Remote"
+  },
+  "properties": [],
+  "configUI": {
+    "displayName": "SpaceX Plugin",
+    "properties": []
+  },
+  "metrics": [
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "fuel",
+        "unit": "Count",
+        "displayname": "Combustible"
+      }
+    }
+  ]
+}
