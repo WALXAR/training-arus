@@ -20,4 +20,8 @@ class SpaceXPlugin(RemoteBasePlugin):
         for ship in ships:
             logger.info(f"Procesando navio {ship['ship_name']}")
             device = group.create_device(ship["ship_id"], ship["ship_name"])
+
             device.absolute("fuel", ship["fuel"])
+
+            for engine in ship["thrust"]:
+                device.absolute("thrust", engine["power"], dimensions={"Motor": engine["engine"]})

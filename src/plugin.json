@@ -1,6 +1,6 @@
 {
   "name": "custom.remote.python.spacex",
-  "version": "1.003",
+  "version": "1.004",
   "type": "python",
   "entity": "CUSTOM_DEVICE",
   "technologies": ["SpaceX"],
@@ -29,6 +29,20 @@
         "unit": "Count",
         "displayname": "Combustible"
       }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "thrust",
+        "unit": "Percent",
+        "displayname": "Potencia",
+        "dimensions": ["Motor"]
+      }
     }
-  ]
+  ],
+  "ui": {
+    "keymetrics": [
+      {"key":  "fuel"}
+    ]
+  }
 }
