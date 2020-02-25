@@ -1,6 +1,6 @@
 {
   "name": "custom.remote.python.spacex",
-  "version": "1.004",
+  "version": "1.005",
   "type": "python",
   "entity": "CUSTOM_DEVICE",
   "technologies": ["SpaceX"],

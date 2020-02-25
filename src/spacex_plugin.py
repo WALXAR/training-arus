@@ -25,3 +25,5 @@ class SpaceXPlugin(RemoteBasePlugin):
 
             for engine in ship["thrust"]:
                 device.absolute("thrust", engine["power"], dimensions={"Motor": engine["engine"]})
+
+            device.add_endpoint(ship["ship_ip"])
