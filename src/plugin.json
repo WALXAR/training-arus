@@ -1,6 +1,6 @@
 {
   "name": "custom.remote.python.spacex",
-  "version": "1.007",
+  "version": "1.008",
   "type": "python",
   "entity": "CUSTOM_DEVICE",
   "technologies": ["SpaceX"],
@@ -38,6 +38,21 @@
         "displayname": "Potencia",
         "dimensions": ["Motor"]
       }
+    },
+    {
+      "statetimeseries": {
+        "key": "weather",
+        "states": ["Fair",
+          "Cloudy",
+          "Sunny",
+          "Rainy",
+          "Stormy",
+          "Snowy",
+          "Windy",
+          "Hail"
+        ],
+        "displayname": "Clima"
+      }
     }
   ],
   "ui": {
@@ -63,6 +78,18 @@
             "key": "thrust",
             "displayName": "Potencia",
             "mergeaggregation": "AVG"
+          }
+        ]
+      },
+      {
+        "group": "Weather",
+        "title": "Clima",
+        "series": [
+          {
+            "key": "weather",
+            "displayName": "Clima",
+            "statecolors": [ "#CD6155", "#AF7AC5", "#5499C7", "#48C9B0", "##58D68D", "##F4D03F", "#EB984E", "#5D6D7E" ],
+            "statechart": true
           }
         ]
       }

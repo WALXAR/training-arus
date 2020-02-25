@@ -36,3 +36,6 @@ class SpaceXPlugin(RemoteBasePlugin):
             device.report_property("Puerto", ship.get("home_port", "Desconocido"))
             device.report_property("Activo", str(ship.get("active", True)))
             device.report_property("Construcción", str(ship.get("year_built", "Desconocido")))
+
+            # State Timeseries
+            device.state_metric("weather", ship["weather"])
