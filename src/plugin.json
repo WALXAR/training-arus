@@ -1,6 +1,6 @@
 {
   "name": "custom.remote.python.spacex",
-  "version": "1.005",
+  "version": "1.007",
   "type": "python",
   "entity": "CUSTOM_DEVICE",
   "technologies": ["SpaceX"],
@@ -42,7 +42,30 @@
   ],
   "ui": {
     "keymetrics": [
-      {"key":  "fuel"}
+      {"key":  "fuel", "displayName":  "Cumbustible"}
+    ],
+    "keycharts": [
+      {
+        "group": "Ship",
+        "title": "Combustible",
+        "series": [
+          {
+            "key": "fuel",
+            "displayName": "Combustible"
+          }
+        ]
+      },
+      {
+        "group": "Ship",
+        "title": "Potencia",
+        "series": [
+          {
+            "key": "thrust",
+            "displayName": "Potencia",
+            "mergeaggregation": "AVG"
+          }
+        ]
+      }
     ]
   }
 }
